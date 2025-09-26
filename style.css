@@ -1,0 +1,90 @@
+
+body{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	perspective: 580px;
+    transition: all .5s;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%,
+     rgba(0,0,0,1) 15%, rgb(39, 39, 68) 100%);
+}
+body:hover{
+	perspective: 1500px;
+}
+.wrapper{
+	width: 300px;
+	height: 300px;
+	position: relative;
+	transition: all 10s;
+	transform: rotateZ(0) rotateX(0) rotateY(0);
+	transform-style: preserve-3d;
+}
+
+.wrapper:hover{
+	transform: rotateZ(0deg) rotateX(90deg) rotateY(310deg);
+}
+.face{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 5s;
+	opacity: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 25px;
+}
+.face:nth-child(1){
+    background-image: url(./imgs/ai.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center left;
+	transform: rotateY(-90deg) translateX(-150px);
+}
+.face:nth-child(2){
+    background-image: url(./imgs/aia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+	transform-origin: center right;
+	transform: rotateY(90deg) translateX(150px);
+}
+.face:nth-child(3){
+    background-image: url(./imgs/aib.png);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center top;
+	transform: rotateX(90deg) translateY(-150px)
+	
+}
+.face:nth-child(4){
+    background-image: url(./imgs/aic.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: rotateX(90deg) translateY(150px);
+}
+.face:nth-child(5){
+    background-image: url(./imgs/aid.jpg);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: translateZ(-150px);
+}
+.face:nth-child(6){
+    background-image: url(./imgs/ai-g.png);
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat; 
+	transform-origin: center bottom;
+	transform: translateZ(150px);
+} 
